@@ -15,7 +15,6 @@ export function makeCreditsRouter(express, prisma, queue, sendEmailFn) {
     agent: z.string().min(2)
   });
 
-  // protegido con JWT
   router.post("/", authenticateJWT, async (req, res) => {
     try {
       const parsed = CreditSchema.parse(req.body);
