@@ -2,7 +2,7 @@ import nodemailer from "nodemailer";
 
 export function makeTransporter() {
   const host = process.env.SMTP_HOST;
-  if (!host) return null; // sin SMTP configurado (modo demo)
+  if (!host) return null;
 
   const transporter = nodemailer.createTransport({
     host,

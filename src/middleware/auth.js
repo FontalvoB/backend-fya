@@ -8,7 +8,7 @@ export function authenticateJWT(req, res, next) {
   if (!token) return res.status(401).json({ ok: false, error: "Token requerido" });
 
   try {
-    const payload = jwt.verify(token, SECRET); // { id, email, role }
+    const payload = jwt.verify(token, SECRET); 
     req.user = payload;
     next();
   } catch {

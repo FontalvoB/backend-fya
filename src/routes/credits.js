@@ -1,7 +1,6 @@
-// backend/src/routes/credits.js
 import { z } from "zod";
 import dayjs from "dayjs";
-import { authenticateJWT } from "../middleware/auth.js"; // 👈 IMPORTANTE
+import { authenticateJWT } from "../middleware/auth.js"; 
 
 export function makeCreditsRouter(express, prisma, queue, sendEmailFn) {
   const router = express.Router();
